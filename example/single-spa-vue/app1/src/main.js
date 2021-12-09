@@ -5,8 +5,6 @@ import singleSpaVue from 'single-spa-vue';
 
 Vue.config.productionTip = false
 
-console.log(`process.env <====================>`, process.env);
-
 // 非single-spa环境，独立运行
 if(!window.singleSpaNavigate) {
   new Vue({
