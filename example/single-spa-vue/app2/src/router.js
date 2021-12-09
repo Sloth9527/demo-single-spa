@@ -1,8 +1,8 @@
-import { createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import routes from './views/routes';
 
-const router = createWebHistory({
-    base: process.env.VUE_APP_BASE_URL,
+const router = createRouter({
+    history: createWebHistory(process.env.VUE_APP_BASE_URL),
     routes,
 });
 
