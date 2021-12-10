@@ -1,4 +1,4 @@
-import { createApp } from 'vue'
+import { createApp, h } from 'vue'
 import App from './App.vue'
 import router from './router';
 import singleSpaVue from 'single-spa-vue';
@@ -13,14 +13,15 @@ if(!window.singleSpaNavigate) {
 // single-spa 启动
 const appOptions = {
     el: "#microApp",
-    router,
-    render: h => h(App)
+    render: () => h(App)
 }
 
 const vueLifecycle = singleSpaVue({
     createApp,
     appOptions,
-    router,
+    handleInstance: vueInstance => {
+        vueInstance.use(router);
+    }
 });
 
 export function bootstrap(props) {

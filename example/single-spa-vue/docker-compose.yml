@@ -1,0 +1,43 @@
+version: '3.9'
+
+services:
+  app_vue2:
+    container_name: spa_app_vue2
+    hostname: spa_app_vue2
+    build: 
+      context: ./app1
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./app1/src:/opt/app/src
+    ports:
+      - 8081:8081
+    networks:
+      - spa
+  
+  app_vue3:
+    container_name: spa_app_vue3
+    hostname: spa_app_vue3
+    build: 
+      context: ./app2
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./app2/src:/opt/app/src
+    ports:
+      - 8082:8082
+    networks:
+      - spa
+
+  server_vue3:
+    container_name: spa_server_vue3
+    build: 
+      context: ./server_vue
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./server_vue/src:/opt/app/src
+    ports:
+      - 8080:8080
+    networks:
+      - spa
+
+networks:
+  spa:

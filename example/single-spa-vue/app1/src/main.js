@@ -23,7 +23,6 @@ const appOptions = {
 const vueLifecycle = singleSpaVue({
   Vue,
   appOptions,
-  router,
 });
 
 export function bootstrap(props) {
