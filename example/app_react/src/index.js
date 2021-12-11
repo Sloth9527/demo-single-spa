@@ -25,17 +25,17 @@ const reactLifecycles = new singleSpaReact({
 });
 
 export function bootstrap(props) {
-  console.log(`app_vue2 start <====================>`, props);
+  console.log(`app_react start <====================>`, props);
   return reactLifecycles.bootstrap(() => {});
 }
 
 export function mount(props) {
-  console.log(`app_vue2 mount <====================>`, props);
+  console.log(`app_react mount <====================>`, props);
   return reactLifecycles.mount(() => {});
 }
 
 export function unmount(props) {
-  console.log(`app_vue2 unmount <====================>`, props);
+  console.log(`app_react unmount <====================>`, props);
   return reactLifecycles.unmount(() => {});
 }
 

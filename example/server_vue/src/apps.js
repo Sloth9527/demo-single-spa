@@ -38,6 +38,12 @@ const apps = [
       activeWhen: location => location.pathname.startsWith('/app_vue3'),
       customProps: {}
     },
+    {
+      name: 'app_react',
+      app: loadApp('http://localhost:8083', 'app_react'),
+      activeWhen: location => location.pathname.startsWith('/app_react'),
+      customProps: {}
+    },
 ];
 
 export default apps;
