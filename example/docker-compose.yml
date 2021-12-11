@@ -5,27 +5,34 @@ services:
     container_name: spa_app_vue2
     hostname: spa_app_vue2
     build: 
-      context: ./app1
+      context: ./app_vue2
       dockerfile: Dockerfile.dev
     volumes:
-      - ./app1/src:/opt/app/src
+      - ./app_vue2/src:/opt/app/src
     ports:
       - 8081:8081
-    networks:
-      - spa
   
   app_vue3:
     container_name: spa_app_vue3
     hostname: spa_app_vue3
     build: 
-      context: ./app2
+      context: ./app_vue3
       dockerfile: Dockerfile.dev
     volumes:
-      - ./app2/src:/opt/app/src
+      - ./app_vue3/src:/opt/app/src
     ports:
       - 8082:8082
-    networks:
-      - spa
+
+  app_react:
+    container_name: spa_app_react
+    hostname: spa_app_react
+    build: 
+      context: ./app_react
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./app_react/src:/opt/app/src
+    ports:
+      - 8083:3000
 
   server_vue3:
     container_name: spa_server_vue3
@@ -36,8 +43,3 @@ services:
       - ./server_vue/src:/opt/app/src
     ports:
       - 8080:8080
-    networks:
-      - spa
-
-networks:
-  spa:
