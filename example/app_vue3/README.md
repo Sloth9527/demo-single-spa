@@ -1,4 +1,4 @@
-# app2
+# app_vue3
 
 ## Project setup
 ```

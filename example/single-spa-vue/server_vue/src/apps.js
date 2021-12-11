@@ -33,9 +33,9 @@ const apps = [
       customProps: {}
     },
     {
-      name: 'app2',
-      app: loadApp('http://localhost:8082', 'app2'),
-      activeWhen: location => location.pathname.startsWith('/app2'),
+      name: 'app_vue3',
+      app: loadApp('http://localhost:8082', 'app_vue3'),
+      activeWhen: location => location.pathname.startsWith('/app_vue3'),
       customProps: {}
     },
 ];
