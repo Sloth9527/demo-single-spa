@@ -1,5 +1,5 @@
 <template>
     <div>
-        <h1>app1 About page</h1>
+        <h1>app_vue2 About page</h1>
     </div>
 </template>

@@ -2,10 +2,12 @@
   <div id="app" >
     <h1>server vue3</h1>
     <div class="nav" >
-      <router-link to="/app1/home">app1 home</router-link>
-      <router-link to="/app1/about" >app1 about</router-link>
+      <router-link to="/app_vue2/home">app_vue2 home</router-link>
+      <router-link to="/app_vue2/about" >app_vue2 about</router-link>
       <router-link to="/app2/home" >app2 home</router-link>
       <router-link to="/app2/about" >app2 about</router-link>
+      <router-link to="/app_react/home">app_react home</router-link>
+      <router-link to="/app_react/about" >app_react about</router-link>
     </div>
     <div id="microApp" >
 

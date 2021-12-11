@@ -25,17 +25,17 @@ const vueLifecycle = singleSpaVue({
 });
 
 export function bootstrap(props) {
-    console.log(`app1 start <====================>`, props);
+    console.log(`app_vue3 start <====================>`, props);
     return vueLifecycle.bootstrap(() => {});
 }
 
 export function mount(props) {
-    console.log(`app1 mount <====================>`, props);
+    console.log(`app_vue3 mount <====================>`, props);
     return vueLifecycle.mount(() => {});
 }
 
 export function unmount(props) {
-    console.log(`app1 unmount <====================>`, props);
+    console.log(`app_vue3 unmount <====================>`, props);
     return vueLifecycle.unmount(() => {});
 }
   
