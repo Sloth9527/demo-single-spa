@@ -5,6 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import singleSpaReact from 'single-spa-react';
 
+/* eslint-disable */
+console.log(`__webpack_require__.p <====================>`, __webpack_require__.p);
+__webpack_require__.p = "http://localhost:8083/"
+
 // 非single-spa环境，独立运行
 if(!window.singleSpaNavigate) {
   ReactDOM.render(
@@ -15,12 +19,14 @@ if(!window.singleSpaNavigate) {
   );
 }
 
+const Main = () => <React.StrictMode>
+  <App />
+</React.StrictMode>;
+
 const reactLifecycles = new singleSpaReact({
   React,
   ReactDOM,
-  rootComponent: <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  rootComponent: Main,
   domElementGetter: () => document.getElementById('microApp'),
 });
 

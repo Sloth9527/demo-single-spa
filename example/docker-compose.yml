@@ -3,7 +3,6 @@ version: '3.9'
 services:
   app_vue2:
     container_name: spa_app_vue2
-    hostname: spa_app_vue2
     build: 
       context: ./app_vue2
       dockerfile: Dockerfile.dev
@@ -14,7 +13,6 @@ services:
   
   app_vue3:
     container_name: spa_app_vue3
-    hostname: spa_app_vue3
     build: 
       context: ./app_vue3
       dockerfile: Dockerfile.dev
@@ -25,7 +23,6 @@ services:
 
   app_react:
     container_name: spa_app_react
-    hostname: spa_app_react
     build: 
       context: ./app_react
       dockerfile: Dockerfile.dev

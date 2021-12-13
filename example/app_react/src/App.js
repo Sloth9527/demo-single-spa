@@ -2,6 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import Routes from  './Routes';
 
+/* eslint-disable */
+console.log(`__webpack_require__.p <=====App===============>`, __webpack_require__.p);
+
 function App() {
   return (
     <div className="App">
