@@ -40,3 +40,13 @@ services:
       - ./server_vue/src:/opt/app/src
     ports:
       - 8080:8080
+
+  server_react:
+    container_name: spa_server_react
+    build: 
+      context: ./server_react
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./server_react/src:/opt/app/src
+    ports:
+      - 8030:3000
